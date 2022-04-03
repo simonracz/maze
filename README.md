@@ -1,4 +1,4 @@
-# maze
+# Maze
 Simple Maze Generator for Fun
 
 # Description
