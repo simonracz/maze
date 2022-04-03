@@ -59,6 +59,11 @@ int main(int argc, char* argv[]) {
                     cerr << "Error parsing argument : " << optarg << "\n";
                     print_usage_and_exit();
                 }
+                if (n < 1 || n > 500) {
+                    cerr << "Dimension is out of range (1..500) : " << optarg << "\n";
+                    print_usage_and_exit();
+                    break;
+                }
                 continue;
             }
             case 'm': {
@@ -66,6 +71,11 @@ int main(int argc, char* argv[]) {
                 if (errno) {
                     cerr << "Error parsing argument : " << optarg << "\n";
                     print_usage_and_exit();
+                }
+                if (m < 1 || m > 500) {
+                    cerr << "Dimension is out of range (1..500) : " << optarg << "\n";
+                    print_usage_and_exit();
+                    break;
                 }
                 continue;
             }
