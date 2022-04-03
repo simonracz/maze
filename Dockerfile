@@ -17,5 +17,5 @@ WORKDIR /app
 
 RUN clang++ -std=c++17 -O2 -o maze maze.cpp
 
-WORKDIR /app/tmp
+WORKDIR /app/shared
 ENTRYPOINT [ "/app/maze" ]

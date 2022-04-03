@@ -16,4 +16,4 @@ docker/tag/%:
 
 #.PHONY: docker/run/%
 #docker/run/%:
-#	docker run -it -v $(shell pwd):/app/tmp --rm $(IMAGE) $*
+#	docker run -it -v $(shell pwd):/app/shared --rm $(IMAGE) $*

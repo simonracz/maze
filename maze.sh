@@ -2,4 +2,4 @@
 
 IMAGE=maze
 
-docker run -it -v $PWD:/app/tmp --rm $IMAGE $@
+docker run -it -v $PWD:/app/shared --rm $IMAGE $@
