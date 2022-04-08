@@ -7,7 +7,13 @@ RUN apt -y update && \
     apt -y upgrade && \
     apt -y install clang
 
-RUN addgroup --gid $GROUP_ID user && \
+RUN if [ $USER_ID -lt 1000 ]; \
+    then export USER_ID=1000; \
+    fi && \
+    if [ $GROUP_ID -lt 1000 ]; \
+    then export GROUP_ID=1000; \
+    fi && \
+    addgroup --gid $GROUP_ID user && \
     adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID user
 
 USER user

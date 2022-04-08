@@ -107,13 +107,10 @@ struct Maze {
     }
 
     void print_png() {
-        /*
         ofstream ofs("image.png");
         if (!ofs) {
             cerr << "Failed to write file image.png\n";
-            return 1;
         }
-        */
     }
 };
 
@@ -291,5 +288,6 @@ int main(int argc, char* argv[]) {
     Maze maze = generate_maze(n, m, t);
     // print_edges(maze.doors);
     maze.print_ascii();
+    maze.print_png();
     return 0;
 }
